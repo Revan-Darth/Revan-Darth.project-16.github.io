@@ -12,6 +12,20 @@
 		          '<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity="0.1" cx="24" cy="24" r="23.5" stroke="white"/><path d="M31.3536 24.3536C31.5488 24.1583 31.5488 23.8417 31.3536 23.6464L28.1716 20.4645C27.9763 20.2692 27.6597 20.2692 27.4645 20.4645C27.2692 20.6597 27.2692 20.9763 27.4645 21.1716L30.2929 24L27.4645 26.8284C27.2692 27.0237 27.2692 27.3403 27.4645 27.5355C27.6597 27.7308 27.9763 27.7308 28.1716 27.5355L31.3536 24.3536ZM16 24.5H31V23.5H16V24.5Z" fill="white"/></svg>'
 		        ]
 			 });
+			 $(".graphic__wrapper").owlCarousel({
+			 	loop: true,
+			 	center: true,
+			 	responsive: {
+			 		0: {
+			 			items: 1.15,
+			 			margin: 10,
+			 		},
+			 		992: {
+			 			items: 1.5,
+			 			margin: 30,
+			 		}
+			 	}
+			 });
 		// Tabs in JQuery
 			$('.tab').on('click', function(e){
 				e.preventDefault();
@@ -360,4 +374,114 @@
 				 phoneInput.addEventListener('paste', onPhonePaste, false);
 		}
 	});
+// Popup
+	const popupLinks = document.querySelectorAll('.popup-link');
+	const body = document.querySelector('body');
+	const lockPadding = document.querySelectorAll('.lock-padding'); // Добавлять элементу, который багается при Lock'е
 
+	let unlock = true;
+	const timeout = 200; // Время выполнения transition, как и в CSS
+
+	if (popupLinks.length > 0) {
+		for (let index = 0; index < popupLinks.length; index++){
+			const popupLink = popupLinks[index];
+			popupLink.addEventListener('click', function (e){
+				const popupName = popupLink.getAttribute('href').replace('#', '');
+				const curentPopup = document.getElementById(popupName);
+				popupOpen(curentPopup);
+				e.preventDefault();
+			});
+		}
+	}
+	const popupCloseIcon = document.querySelectorAll('.popup__close');
+	if (popupCloseIcon.length > 0){
+		for (let index = 0; index < popupCloseIcon.length; index++){
+			const el = popupCloseIcon[index];
+			el.addEventListener('click', function (e) {
+				popupClose(el.closest('.popup'));
+				e.preventDefault();
+			});
+		}
+	}
+	function popupOpen(curentPopup) {
+		if (curentPopup && unlock){
+			const popupActive = document.querySelector('.popup.open');
+			if (popupActive) {
+				popupClose(popupActive, false);
+			} else {
+				bodyLock();
+			}
+			curentPopup.classList.add('open');
+			curentPopup.addEventListener('click', function (e) {
+				if (!e.target.closest('.popup__content')) {
+					popupClose(e.target.closest('.popup'));
+				}
+			});
+		}
+	}
+	function popupClose(popupActive, doUnlock = true) {
+		if (unlock) {
+			popupActive.classList.remove('open');
+			if (doUnlock){
+				bodyUnLock();
+			}
+		}
+	}
+	function bodyLock() {
+		const lockPaddingValue = window.innerWidth - document.querySelector('body').offsetWidth + 'px';
+		if (lockPadding.length > 0){
+			for (let index = 0; index < lockPadding.length; index++) {
+				const el = lockPadding[index];
+				el.style.paddingRight = lockPaddingValue;
+			}
+		}
+		body.style.paddingRight = lockPaddingValue;
+		body.classList.add('lock');
+		unlock = false;
+		setTimeout(function () {
+			unlock = true;
+		}, timeout);
+	}
+	function bodyUnLock() {
+		setTimeout(function () {
+			if (lockPadding.length > 0) {
+				for (let index = 0; index < lockPadding.length; index++) {
+					const el = lockPadding[index];
+					el.style.paddingRight = '0px';
+				}
+			}
+			body.style.paddingRight = '0px';
+			body.classList.remove('lock');
+		}, timeout);
+		unlock = false;
+		setTimeout(function () {
+			unlock = true;
+		}, timeout);
+	}
+	document.addEventListener('keydown', function (e) {
+		if (e.which === 27) {
+			const popupActive = document.querySelector('.popup.open');
+			popupClose(popupActive);
+		}
+	});
+
+	(function () {
+		if (!Element.prototype.closest) {
+			Element.prototype.closest = function (css) {
+				var node = this;
+				while (node) {
+					if (node.matches(css)) return node;
+					else node = node.parentElement;
+				}
+				return null;
+			};
+		}
+	})();
+	(function () {
+		if (!Element.prototype.matches) {
+			Element.prototype.matches = Element.prototype.matchesSelector ||
+				Element.prototype.webkitMatchesSelector ||
+				Element.prototype.mozMatchesSelector ||
+				Element.prototype.msMatchesSelector;
+		}
+	})();
