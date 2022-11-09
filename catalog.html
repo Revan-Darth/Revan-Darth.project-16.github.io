@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>TuoTown</title>
+		<link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="images/favicons/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="images/favicons/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+		<link rel="manifest" href="images/favicons/manifest.json">
+		<meta name="msapplication-TileImage" content="images/favicons/ms-icon-144x144.png">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="theme-color" content="#ffffff">
+		<meta name="description" content="Сайт ножей TuoTown">
+		<meta name="keywords" content="html, css, jquery, javascript, бэм, адаптив, многостраничный">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/libs.min.css">
+		<link rel="stylesheet" href="css/style.min.css">
+	</head>
+	<body>
+
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__top">
+					<div class="header__container">
+						<nav class="header__navigation">
+							<div class="header__contacts">
+								<button class="header__burger menu__burger" type="button" title="Всплывающее меню">
+									<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<circle cx="3.5" cy="3.5" r="3" stroke="white"/>
+										<circle cx="3.5" cy="11.5" r="3" stroke="white"/>
+										<circle cx="3.5" cy="19.5" r="3" stroke="white"/>
+										<circle cx="11.5" cy="3.5" r="3" stroke="white"/>
+										<circle cx="11.5" cy="11.5" r="3" stroke="white"/>
+										<circle cx="11.5" cy="19.5" r="3" stroke="white"/>
+										<circle cx="19.5" cy="3.5" r="3" stroke="white"/>
+										<circle cx="19.5" cy="11.5" r="3" stroke="white"/>
+										<circle cx="19.5" cy="19.5" r="3" stroke="white"/>
+									</svg>
+								</button>
+								<a class="header__contacts-link header__contacts-link--map" data-da=".header__sidebar-top--links,600,0" href="information.html" title="Перейти на страницу Местоположения">
+									<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M20.125 9.58333C20.125 16.2917 11.5 22.0417 11.5 22.0417C11.5 22.0417 2.875 16.2917 2.875 9.58333C2.875 7.29584 3.7837 5.10203 5.4012 3.48453C7.0187 1.86703 9.21251 0.958328 11.5 0.958328C13.7875 0.958328 15.9813 1.86703 17.5988 3.48453C19.2163 5.10203 20.125 7.29584 20.125 9.58333Z" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M11.5 12.4583C13.0878 12.4583 14.375 11.1711 14.375 9.58333C14.375 7.99551 13.0878 6.70833 11.5 6.70833C9.91218 6.70833 8.625 7.99551 8.625 9.58333C8.625 11.1711 9.91218 12.4583 11.5 12.4583Z" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<a class="header__contacts-link header__contacts-link--phone" href="tel:87777777777" title="Позвонить на номер 8 981 120-11-17">
+									<svg class="header__contacts-link--phone_svg visually-hidden" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M20.9999 15.9201V18.9201C21.0011 19.1986 20.944 19.4743 20.8324 19.7294C20.7209 19.9846 20.5572 20.2137 20.352 20.402C20.1468 20.5902 19.9045 20.7336 19.6407 20.8228C19.3769 20.912 19.0973 20.9452 18.8199 20.9201C15.7428 20.5857 12.7869 19.5342 10.1899 17.8501C7.77376 16.3148 5.72527 14.2663 4.18993 11.8501C2.49991 9.2413 1.44818 6.27109 1.11993 3.1801C1.09494 2.90356 1.12781 2.62486 1.21643 2.36172C1.30506 2.09859 1.4475 1.85679 1.6347 1.65172C1.82189 1.44665 2.04974 1.28281 2.30372 1.17062C2.55771 1.05843 2.83227 1.00036 3.10993 1.0001H6.10993C6.59524 0.995321 7.06572 1.16718 7.43369 1.48363C7.80166 1.80008 8.04201 2.23954 8.10993 2.7201C8.23656 3.68016 8.47138 4.62282 8.80993 5.5301C8.94448 5.88802 8.9736 6.27701 8.89384 6.65098C8.81408 7.02494 8.6288 7.36821 8.35993 7.6401L7.08993 8.9101C8.51349 11.4136 10.5864 13.4865 13.0899 14.9101L14.3599 13.6401C14.6318 13.3712 14.9751 13.1859 15.3491 13.1062C15.723 13.0264 16.112 13.0556 16.4699 13.1901C17.3772 13.5286 18.3199 13.7635 19.2799 13.8901C19.7657 13.9586 20.2093 14.2033 20.5265 14.5776C20.8436 14.9519 21.0121 15.4297 20.9999 15.9201Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									<span class="header__contacts-link--phone_text">8 777 777-77-77</span>
+								</a>
+							</div>
+							<a class="header__logo" href="index.html" title="Логотип Компании TuoTown">
+								<img src="images/logo.jpg" alt="Логотип Компании TuoTown">
+							</a>
+							<div class="header__buttons">
+								<a class="header__buttons-link header__contacts-link--basket" data-da=".header__contacts,600,3" href="#" title="Корзина">
+									<svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M9.96812 0C10.3023 0.0664498 10.6486 0.112453 10.9767 0.204461C12.8663 0.751393 14.0632 2.0855 14.1908 3.76719C14.1908 3.79786 14.203 3.82853 14.2091 3.88987C14.2941 3.88987 14.3792 3.88987 14.4582 3.88987C15.2602 3.88987 16.0683 3.88987 16.8703 3.88987C17.3685 3.88987 17.6116 4.07388 17.6602 4.48792C17.8242 6.02137 17.9822 7.55994 18.1402 9.09339C18.3346 10.9182 18.529 12.7481 18.7234 14.5729C18.8206 15.4675 18.9482 16.362 18.9968 17.2565C19.0455 18.1766 18.529 18.882 17.6602 19.4084C16.9736 19.8225 16.1898 19.9912 15.3453 19.9912C12.3073 19.986 9.26332 19.9912 6.22539 19.9912C5.27148 19.9912 4.32364 20.0167 3.36973 19.9809C2.16671 19.94 1.17634 19.5209 0.47762 18.6724C-0.00237289 18.0897 -0.0509798 17.4354 0.0340823 16.7505C0.210282 15.3346 0.343951 13.9136 0.489772 12.4926C0.635593 11.0971 0.787489 9.70678 0.93331 8.31133C1.06698 7.07434 1.19457 5.83736 1.32217 4.60037C1.32824 4.54414 1.32824 4.4828 1.34039 4.42658C1.40115 4.06877 1.63811 3.88987 2.07557 3.88476C2.88974 3.87964 3.69783 3.88476 4.51199 3.88476C4.60313 3.88476 4.69427 3.88476 4.79148 3.88476C4.82794 3.27648 4.96768 2.71422 5.2897 2.19284C6.05526 0.981412 7.24005 0.265799 8.84408 0.0408922C8.91092 0.0306691 8.97775 0.0153346 9.04459 0C9.34838 0 9.65825 0 9.96812 0ZM4.80971 5.00929C4.06238 5.00929 3.34543 5.00929 2.61632 5.00929C2.61025 5.05018 2.5981 5.08085 2.5981 5.11663C2.41582 6.86477 2.22747 8.61802 2.04519 10.3662C1.80823 12.6459 1.57128 14.9308 1.32824 17.2105C1.28571 17.6296 1.44976 17.9772 1.77785 18.2788C2.28823 18.7388 2.94442 18.8973 3.66745 18.8973C7.556 18.9024 11.4506 18.9024 15.3392 18.8973C15.7766 18.8973 16.1959 18.836 16.5969 18.6724C17.2348 18.4117 17.7938 17.8545 17.6845 17.1389C17.6176 16.7096 17.5872 16.27 17.5447 15.8355C17.3867 14.302 17.2227 12.7635 17.0647 11.23C16.8824 9.50232 16.7002 7.76951 16.5179 6.04182C16.4814 5.69935 16.4389 5.35687 16.4025 5.01951C15.6612 5.01951 14.9382 5.01951 14.203 5.01951C14.203 5.09107 14.203 5.15241 14.203 5.20864C14.203 5.70446 14.2091 6.20027 14.1969 6.69098C14.1908 7.00278 13.8992 7.2328 13.5407 7.22769C13.1944 7.22258 12.9149 6.99767 12.8967 6.69609C12.8906 6.59386 12.8967 6.48652 12.8967 6.38429C12.8967 5.92936 12.8967 5.47444 12.8967 5.01951C10.6243 5.01951 8.38232 5.01951 6.1221 5.01951C6.1221 5.07063 6.1221 5.11152 6.1221 5.1473C6.1221 5.65334 6.12817 6.16449 6.1221 6.67053C6.11602 6.99767 5.83046 7.2328 5.4659 7.22769C5.10743 7.22769 4.83401 6.99256 4.82186 6.68076C4.81579 6.58364 4.82186 6.48652 4.82186 6.3894C4.80971 5.92936 4.80971 5.47444 4.80971 5.00929ZM12.8906 3.87964C12.8055 2.81134 12.2526 1.99349 11.159 1.47723C9.97419 0.920074 8.77725 0.960966 7.64106 1.58457C6.675 2.11617 6.18285 2.89823 6.1221 3.87964C8.38839 3.87964 10.6304 3.87964 12.8906 3.87964Z" fill="white"/>
+									</svg>
+								</a>
+								<a class="header__buttons-link header__contacts-link--email" data-da=".header__sidebar-top--links,600,1" href="service.html" title="Email Сервис">
+									<svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M3 1H19C20.1 1 21 1.84375 21 2.875V14.125C21 15.1563 20.1 16 19 16H3C1.9 16 1 15.1563 1 14.125V2.875C1 1.84375 1.9 1 3 1Z" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M21 2.875L11 9.4375L1 2.875" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<a class="header__buttons-link header__contacts-link--search" data-da=".header__sidebar-top--links,600,2" href="#" title="Поиск">
+									<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M8.55555 16.1111C12.7284 16.1111 16.1111 12.7284 16.1111 8.55556C16.1111 4.38274 12.7284 1 8.55555 1C4.38274 1 1 4.38274 1 8.55556C1 12.7284 4.38274 16.1111 8.55555 16.1111Z" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M17.9999 17.9999L13.8916 13.8916" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+							</div>
+						</nav>
+					</div>
+				</div>
+				<div class="header__sidebar">
+					<div class="header__sidebar-body">
+						<div class="header__sidebar-inner">
+							<div class="header__sidebar-top">
+								<button class="header__sidebar-button" title="Скрыть Меню">
+									<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M7 13L1 7L7 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+								<div class="header__sidebar-top--links"></div>
+							</div>
+							<ul class="header__sidebar-items">
+								<li class="header__sidebar-item">
+									<a class="header__sidebar-item--link" href="#" title="Кухонные ножи TUOTOWN">Кухонные ножи TUOTOWN</a>
+								</li>
+								<li class="header__sidebar-item">
+									<a class="header__sidebar-item--link" href="#" title="Складные ножи TUOTOWN">Складные ножи TUOTOWN</a>
+								</li>
+								<li class="header__sidebar-item">
+									<a class="header__sidebar-item--link" href="#" title="Кухонные ножи QXF">Кухонные ножи QXF</a>
+								</li>
+								<li class="header__sidebar-item">
+									<a class="header__sidebar-item--link" href="#" title="Точильные камни">Точильные камни</a>
+								</li>
+								<li class="header__sidebar-item">
+									<a class="header__sidebar-item--link" href="#" title="Наборы для BBQ">Наборы для BBQ</a>
+								</li>
+								<li class="header__sidebar-item">
+									<a class="header__sidebar-item--link" href="#" title="Кухонные принадлежности">Кухонные принадлежности</a>
+								</li>
+								<li class="header__sidebar-item">
+									<a class="header__sidebar-item--link" href="#" title="Туристические товары">Туристические товары</a>
+								</li>
+							</ul>
+							<ul class="header__sidebar-navigation">
+								<li class="header__sidebar-navigation--item">
+									<a class="header__sidebar-navigation--link" href="#" title="Новости">Новости</a>
+								</li>
+								<li class="header__sidebar-navigation--item">
+									<a class="header__sidebar-navigation--link" href="#" title="О компании">О компании</a>
+								</li>
+								<li class="header__sidebar-navigation--item">
+									<a class="header__sidebar-navigation--link" href="#" title="Контакты">Контакты</a>
+								</li>
+								<li class="header__sidebar-navigation--item">
+									<a class="header__sidebar-navigation--link" href="#" title="Как проехать">Как проехать</a>
+								</li>
+							</ul>
+						</div>
+					</div>	
+				</div>
+				<div class="header__content header__content-catalog">
+					<div class="header__container">
+						<div class="header__text header__text-information">	
+							<h1 class="header__title">Дом и Ножи</h1>
+							<p class="header__description">Эксклюзивные технологии на страже чистоты и уюта в вашем доме</p>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<main id="main">
+				<section class="catalog">
+					<h2 class="catalog__title">Ножи</h2>
+					<div class="catalog__container">
+						<div class="catalog__inner">
+							<form class="catalog__filters" data-spollers action="#">
+								<div class="catalog__filter">
+									<button class="catalog__filter-title" type="button" data-spoller tabindex="-1">Цена</button>
+									<div class="catalog__filter-content">
+										<div class="catalog__filter-wrappper catalog__filter-inputs">
+											<input class="catalog__filter-inp" placeholder="От ..." inputmode="numeric" type="number" minlength="1">
+											<input class="catalog__filter-inp" placeholder="До ..." inputmode="numeric" type="number" >
+										</div>
+										<div class="catalog__filter-wrappper">
+											<label class="catalog__filter-label">
+												<input type="checkbox" class="catalog__filter-input">
+												<span class="catalog__filter-check"></span>
+												До 1.500 ₽
+											</label>
+										</div>
+										<div class="catalog__filter-wrappper">
+											<label class="catalog__filter-label">
+												<input type="checkbox" class="catalog__filter-input">
+												<span class="catalog__filter-check"></span>
+												От 1.500 ₽ до 2.000 ₽
+											</label>
+										</div>
+										<div class="catalog__filter-wrappper">
+											<label class="catalog__filter-label">
+												<input type="checkbox" class="catalog__filter-input">
+												<span class="catalog__filter-check"></span>
+												От 2.000 ₽ до 4.000 ₽
+											</label>
+										</div>
+										<div class="catalog__filter-wrappper">
+											<label class="catalog__filter-label">
+												<input type="checkbox" class="catalog__filter-input">
+												<span class="catalog__filter-check"></span>
+												От 10.000 ₽ до 20.000 ₽
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="catalog__filter">
+									<button class="catalog__filter-title" type="button" data-spoller tabindex="-1">Новинка</button>
+									<div class="catalog__filter-content">
+										<div class="catalog__filter-wrappper">
+											<label class="catalog__filter-label">
+												<input type="checkbox" class="catalog__filter-input">
+												<span class="catalog__filter-check"></span>
+												Да
+											</label>
+										</div>
+										<div class="catalog__filter-wrappper">
+											<label class="catalog__filter-label">
+												<input type="checkbox" class="catalog__filter-input">
+												<span class="catalog__filter-check"></span>
+												Нет
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="catalog__filter">
+									<button class="catalog__filter-title _active" type="button" data-spoller tabindex="-1">Материал Изделия</button>
+									<div class="catalog__filter-content">
+										<div class="catalog__filter-wrappper">
+											<label class="catalog__filter-label">
+												<input type="checkbox" class="catalog__filter-input">
+												<span class="catalog__filter-check"></span>
+												Дамасская сталь
+											</label>
+										</div>
+										<div class="catalog__filter-wrappper">
+											<label class="catalog__filter-label">
+												<input type="checkbox" class="catalog__filter-input">
+												<span class="catalog__filter-check"></span>
+												Диоксид Циркония
+											</label>
+										</div>
+										<div class="catalog__filter-wrappper">
+											<label class="catalog__filter-label">
+												<input type="checkbox" class="catalog__filter-input">
+												<span class="catalog__filter-check"></span>
+												Керамика
+											</label>
+										</div>
+										<div class="catalog__filter-wrappper">
+											<label class="catalog__filter-label">
+												<input type="checkbox" class="catalog__filter-input">
+												<span class="catalog__filter-check"></span>
+												Нержавеющая Сталь
+											</label>
+										</div>
+										<div class="catalog__filter-wrappper">
+											<label class="catalog__filter-label">
+												<input type="checkbox" class="catalog__filter-input">
+												<span class="catalog__filter-check"></span>
+												Титан
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="catalog__filter">
+									<button class="catalog__filter-title" type="button" data-spoller tabindex="-1">Длина Изделия</button>
+									<div class="catalog__filter-content">
+										<div class="catalog__filter-wrappper">
+											<label class="catalog__filter-label">
+												<input type="checkbox" class="catalog__filter-input">
+												<span class="catalog__filter-check"></span>
+												55 мм
+											</label>
+										</div>
+										<div class="catalog__filter-wrappper">
+											<label class="catalog__filter-label">
+												<input type="checkbox" class="catalog__filter-input">
+												<span class="catalog__filter-check"></span>
+												60 мм
+											</label>
+										</div>
+										<div class="catalog__filter-wrappper">
+											<label class="catalog__filter-label">
+												<input type="checkbox" class="catalog__filter-input">
+												<span class="catalog__filter-check"></span>
+												70 мм
+											</label>
+										</div>
+										<div class="catalog__filter-wrappper">
+											<label class="catalog__filter-label">
+												<input type="checkbox" class="catalog__filter-input">
+												<span class="catalog__filter-check"></span>
+												75 мм
+											</label>
+										</div>
+										<div class="catalog__filter-wrappper">
+											<label class="catalog__filter-label">
+												<input type="checkbox" class="catalog__filter-input">
+												<span class="catalog__filter-check"></span>
+												80 мм
+											</label>
+										</div>
+										<div class="catalog__filter-wrappper">
+											<label class="catalog__filter-label">
+												<input type="checkbox" class="catalog__filter-input">
+												<span class="catalog__filter-check"></span>
+												85 мм
+											</label>
+										</div>
+										<div class="catalog__filter-wrappper">
+											<label class="catalog__filter-label">
+												<input type="checkbox" class="catalog__filter-input">
+												<span class="catalog__filter-check"></span>
+												90 мм
+											</label>
+										</div>
+										<div class="catalog__filter-wrappper">
+											<label class="catalog__filter-label">
+												<input type="checkbox" class="catalog__filter-input">
+												<span class="catalog__filter-check"></span>
+												95 мм
+											</label>
+										</div>
+										<div class="catalog__filter-wrappper">
+											<label class="catalog__filter-label">
+												<input type="checkbox" class="catalog__filter-input">
+												<span class="catalog__filter-check"></span>
+												1 см
+											</label>
+										</div>
+									</div>
+								</div>
+								<button class="catalog__filter-button button-red" type="button">Применить</button>
+							</form>
+							<div class="catalog__knifes">
+								<div class="catalog__items">
+									
+									<div class="catalog__items-item knife-case new">
+										<div class="knife-case__interaction">
+											<div class="knife-case__more">
+												<button class="knife-case__append" type="button" title="Добавить в Корзину">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 5V19" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M5 12H19" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												</button>
+												<button class="knife-case__basket" type="button" title="Перейти в Корзину">
+													<svg width="15" height="19" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M7.86207 0C8.12591 0.0631229 8.39933 0.106823 8.65837 0.194224C10.1502 0.713775 11.0952 1.98109 11.1959 3.57858C11.1959 3.60772 11.2055 3.63685 11.2103 3.69512C11.2775 3.69512 11.3446 3.69512 11.407 3.69512C12.0402 3.69512 12.6782 3.69512 13.3114 3.69512C13.7047 3.69512 13.8966 3.86992 13.935 4.26322C14.0645 5.71991 14.1892 7.18145 14.3139 8.63813C14.4674 10.3716 14.6209 12.1099 14.7745 13.8433C14.8512 14.6931 14.9519 15.5428 14.9903 16.3925C15.0287 17.2665 14.6209 17.9366 13.935 18.4367C13.3929 18.8301 12.7741 18.9903 12.1074 18.9903C9.70889 18.9854 7.30563 18.9903 4.90717 18.9903C4.15405 18.9903 3.40573 19.0146 2.65261 18.9806C1.70282 18.9417 0.920918 18.5436 0.369272 17.7375C-0.00968591 17.184 -0.0480613 16.5625 0.0190957 15.9118C0.158207 14.5668 0.263739 13.217 0.378865 11.8671C0.493992 10.5415 0.613915 9.2208 0.729041 7.89522C0.834574 6.72016 0.935309 5.54511 1.03604 4.37005C1.04084 4.31664 1.04084 4.25837 1.05044 4.20496C1.0984 3.86506 1.28549 3.69512 1.63086 3.69026C2.27365 3.68541 2.91164 3.69026 3.55443 3.69026C3.62639 3.69026 3.69834 3.69026 3.77509 3.69026C3.80387 3.11245 3.9142 2.57833 4.16844 2.08306C4.77285 0.932277 5.70825 0.252492 6.97464 0.0388449C7.02741 0.0291337 7.08018 0.0145668 7.13294 0C7.37279 0 7.61743 0 7.86207 0ZM3.78948 4.7585C3.19946 4.7585 2.63342 4.7585 2.05779 4.7585C2.05299 4.79734 2.0434 4.82648 2.0434 4.86046C1.89949 6.52108 1.75079 8.18656 1.60688 9.84717C1.4198 12.0128 1.23272 14.1832 1.04084 16.3488C1.00726 16.747 1.13678 17.0772 1.39581 17.3637C1.79876 17.8007 2.31682 17.9512 2.88766 17.9512C5.95769 17.956 9.03253 17.956 12.1026 17.9512C12.4479 17.9512 12.7789 17.8929 13.0955 17.7375C13.5992 17.4899 14.0405 16.9606 13.9542 16.2809C13.9014 15.873 13.8774 15.4554 13.8438 15.0427C13.7191 13.586 13.5896 12.1245 13.4649 10.6678C13.321 9.02658 13.1771 7.38053 13.0332 5.73933C13.0044 5.414 12.9708 5.08868 12.942 4.76821C12.3568 4.76821 11.786 4.76821 11.2055 4.76821C11.2055 4.83619 11.2055 4.89445 11.2055 4.94787C11.2055 5.41886 11.2103 5.88985 11.2007 6.35599C11.1959 6.65218 10.9657 6.87069 10.6827 6.86583C10.4092 6.86098 10.1886 6.64733 10.1742 6.36085C10.1694 6.26374 10.1742 6.16177 10.1742 6.06466C10.1742 5.63251 10.1742 5.20036 10.1742 4.76821C8.38014 4.76821 6.61008 4.76821 4.82562 4.76821C4.82562 4.81676 4.82562 4.85561 4.82562 4.8896C4.82562 5.3703 4.83042 5.85586 4.82562 6.33657C4.82082 6.64733 4.59537 6.87069 4.30755 6.86583C4.02453 6.86583 3.80867 6.64247 3.79908 6.34628C3.79428 6.25402 3.79908 6.16177 3.79908 6.06951C3.78948 5.63251 3.78948 5.20036 3.78948 4.7585ZM10.1694 3.68541C10.1022 2.67058 9.66572 1.89369 8.80227 1.40327C7.86687 0.87401 6.92188 0.912854 6.02485 1.50524C5.26214 2.01022 4.87359 2.75313 4.82562 3.68541C6.61487 3.68541 8.38494 3.68541 10.1694 3.68541Z" fill="white"/>
+													</svg>
+												</button>
+											</div>
+											<img class="knife-case__image" src="images/contents/knife-item_1.png" alt="Изображение ножа 'Складной нож SQ01-B' ">
+										</div>
+										<div class="knife-case__info">
+											<a class="knife-case__link" href="#"><b class="knife-case__title" title="Складной нож SQ01-B">Складной нож SQ01-B</b></a>
+											<span class="knife-case__price" title="Цена товара: 850 р.">850 р.</span>
+											<span class="knife-case__new" title="Новинка">Новинка</span>
+										</div>
+									</div>
+									<div class="cases__content-case knife-case">
+										<div class="knife-case__interaction">
+											<div class="knife-case__more">
+												<button class="knife-case__append" type="button" title="Добавить в Корзину">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 5V19" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M5 12H19" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												</button>
+												<button class="knife-case__basket" type="button" title="Перейти в Корзину">
+													<svg width="15" height="19" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M7.86207 0C8.12591 0.0631229 8.39933 0.106823 8.65837 0.194224C10.1502 0.713775 11.0952 1.98109 11.1959 3.57858C11.1959 3.60772 11.2055 3.63685 11.2103 3.69512C11.2775 3.69512 11.3446 3.69512 11.407 3.69512C12.0402 3.69512 12.6782 3.69512 13.3114 3.69512C13.7047 3.69512 13.8966 3.86992 13.935 4.26322C14.0645 5.71991 14.1892 7.18145 14.3139 8.63813C14.4674 10.3716 14.6209 12.1099 14.7745 13.8433C14.8512 14.6931 14.9519 15.5428 14.9903 16.3925C15.0287 17.2665 14.6209 17.9366 13.935 18.4367C13.3929 18.8301 12.7741 18.9903 12.1074 18.9903C9.70889 18.9854 7.30563 18.9903 4.90717 18.9903C4.15405 18.9903 3.40573 19.0146 2.65261 18.9806C1.70282 18.9417 0.920918 18.5436 0.369272 17.7375C-0.00968591 17.184 -0.0480613 16.5625 0.0190957 15.9118C0.158207 14.5668 0.263739 13.217 0.378865 11.8671C0.493992 10.5415 0.613915 9.2208 0.729041 7.89522C0.834574 6.72016 0.935309 5.54511 1.03604 4.37005C1.04084 4.31664 1.04084 4.25837 1.05044 4.20496C1.0984 3.86506 1.28549 3.69512 1.63086 3.69026C2.27365 3.68541 2.91164 3.69026 3.55443 3.69026C3.62639 3.69026 3.69834 3.69026 3.77509 3.69026C3.80387 3.11245 3.9142 2.57833 4.16844 2.08306C4.77285 0.932277 5.70825 0.252492 6.97464 0.0388449C7.02741 0.0291337 7.08018 0.0145668 7.13294 0C7.37279 0 7.61743 0 7.86207 0ZM3.78948 4.7585C3.19946 4.7585 2.63342 4.7585 2.05779 4.7585C2.05299 4.79734 2.0434 4.82648 2.0434 4.86046C1.89949 6.52108 1.75079 8.18656 1.60688 9.84717C1.4198 12.0128 1.23272 14.1832 1.04084 16.3488C1.00726 16.747 1.13678 17.0772 1.39581 17.3637C1.79876 17.8007 2.31682 17.9512 2.88766 17.9512C5.95769 17.956 9.03253 17.956 12.1026 17.9512C12.4479 17.9512 12.7789 17.8929 13.0955 17.7375C13.5992 17.4899 14.0405 16.9606 13.9542 16.2809C13.9014 15.873 13.8774 15.4554 13.8438 15.0427C13.7191 13.586 13.5896 12.1245 13.4649 10.6678C13.321 9.02658 13.1771 7.38053 13.0332 5.73933C13.0044 5.414 12.9708 5.08868 12.942 4.76821C12.3568 4.76821 11.786 4.76821 11.2055 4.76821C11.2055 4.83619 11.2055 4.89445 11.2055 4.94787C11.2055 5.41886 11.2103 5.88985 11.2007 6.35599C11.1959 6.65218 10.9657 6.87069 10.6827 6.86583C10.4092 6.86098 10.1886 6.64733 10.1742 6.36085C10.1694 6.26374 10.1742 6.16177 10.1742 6.06466C10.1742 5.63251 10.1742 5.20036 10.1742 4.76821C8.38014 4.76821 6.61008 4.76821 4.82562 4.76821C4.82562 4.81676 4.82562 4.85561 4.82562 4.8896C4.82562 5.3703 4.83042 5.85586 4.82562 6.33657C4.82082 6.64733 4.59537 6.87069 4.30755 6.86583C4.02453 6.86583 3.80867 6.64247 3.79908 6.34628C3.79428 6.25402 3.79908 6.16177 3.79908 6.06951C3.78948 5.63251 3.78948 5.20036 3.78948 4.7585ZM10.1694 3.68541C10.1022 2.67058 9.66572 1.89369 8.80227 1.40327C7.86687 0.87401 6.92188 0.912854 6.02485 1.50524C5.26214 2.01022 4.87359 2.75313 4.82562 3.68541C6.61487 3.68541 8.38494 3.68541 10.1694 3.68541Z" fill="white"/>
+													</svg>
+												</button>
+											</div>
+											<img class="knife-case__image" src="images/contents/knife-item_2.png" alt="Изображение ножа 'Складной нож JJ001-TUO-B' ">
+										</div>
+										<div class="knife-case__info">
+											<a class="knife-case__link" href="#"><b class="knife-case__title" title="Складной нож JJ001-TUO-B">Складной нож JJ001-TUO-B</b></a>
+											<span class="knife-case__price" title="Цена товара: 12 850 р.">12 850 р.</span>
+											<span class="knife-case__new" title="Новинка">Новинка</span>
+										</div>
+									</div>
+									<div class="catalog__items-item knife-case">
+										<div class="knife-case__interaction">
+											<div class="knife-case__more">
+												<button class="knife-case__append" type="button" title="Добавить в Корзину">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 5V19" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M5 12H19" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												</button>
+												<button class="knife-case__basket" type="button" title="Перейти в Корзину">
+													<svg width="15" height="19" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M7.86207 0C8.12591 0.0631229 8.39933 0.106823 8.65837 0.194224C10.1502 0.713775 11.0952 1.98109 11.1959 3.57858C11.1959 3.60772 11.2055 3.63685 11.2103 3.69512C11.2775 3.69512 11.3446 3.69512 11.407 3.69512C12.0402 3.69512 12.6782 3.69512 13.3114 3.69512C13.7047 3.69512 13.8966 3.86992 13.935 4.26322C14.0645 5.71991 14.1892 7.18145 14.3139 8.63813C14.4674 10.3716 14.6209 12.1099 14.7745 13.8433C14.8512 14.6931 14.9519 15.5428 14.9903 16.3925C15.0287 17.2665 14.6209 17.9366 13.935 18.4367C13.3929 18.8301 12.7741 18.9903 12.1074 18.9903C9.70889 18.9854 7.30563 18.9903 4.90717 18.9903C4.15405 18.9903 3.40573 19.0146 2.65261 18.9806C1.70282 18.9417 0.920918 18.5436 0.369272 17.7375C-0.00968591 17.184 -0.0480613 16.5625 0.0190957 15.9118C0.158207 14.5668 0.263739 13.217 0.378865 11.8671C0.493992 10.5415 0.613915 9.2208 0.729041 7.89522C0.834574 6.72016 0.935309 5.54511 1.03604 4.37005C1.04084 4.31664 1.04084 4.25837 1.05044 4.20496C1.0984 3.86506 1.28549 3.69512 1.63086 3.69026C2.27365 3.68541 2.91164 3.69026 3.55443 3.69026C3.62639 3.69026 3.69834 3.69026 3.77509 3.69026C3.80387 3.11245 3.9142 2.57833 4.16844 2.08306C4.77285 0.932277 5.70825 0.252492 6.97464 0.0388449C7.02741 0.0291337 7.08018 0.0145668 7.13294 0C7.37279 0 7.61743 0 7.86207 0ZM3.78948 4.7585C3.19946 4.7585 2.63342 4.7585 2.05779 4.7585C2.05299 4.79734 2.0434 4.82648 2.0434 4.86046C1.89949 6.52108 1.75079 8.18656 1.60688 9.84717C1.4198 12.0128 1.23272 14.1832 1.04084 16.3488C1.00726 16.747 1.13678 17.0772 1.39581 17.3637C1.79876 17.8007 2.31682 17.9512 2.88766 17.9512C5.95769 17.956 9.03253 17.956 12.1026 17.9512C12.4479 17.9512 12.7789 17.8929 13.0955 17.7375C13.5992 17.4899 14.0405 16.9606 13.9542 16.2809C13.9014 15.873 13.8774 15.4554 13.8438 15.0427C13.7191 13.586 13.5896 12.1245 13.4649 10.6678C13.321 9.02658 13.1771 7.38053 13.0332 5.73933C13.0044 5.414 12.9708 5.08868 12.942 4.76821C12.3568 4.76821 11.786 4.76821 11.2055 4.76821C11.2055 4.83619 11.2055 4.89445 11.2055 4.94787C11.2055 5.41886 11.2103 5.88985 11.2007 6.35599C11.1959 6.65218 10.9657 6.87069 10.6827 6.86583C10.4092 6.86098 10.1886 6.64733 10.1742 6.36085C10.1694 6.26374 10.1742 6.16177 10.1742 6.06466C10.1742 5.63251 10.1742 5.20036 10.1742 4.76821C8.38014 4.76821 6.61008 4.76821 4.82562 4.76821C4.82562 4.81676 4.82562 4.85561 4.82562 4.8896C4.82562 5.3703 4.83042 5.85586 4.82562 6.33657C4.82082 6.64733 4.59537 6.87069 4.30755 6.86583C4.02453 6.86583 3.80867 6.64247 3.79908 6.34628C3.79428 6.25402 3.79908 6.16177 3.79908 6.06951C3.78948 5.63251 3.78948 5.20036 3.78948 4.7585ZM10.1694 3.68541C10.1022 2.67058 9.66572 1.89369 8.80227 1.40327C7.86687 0.87401 6.92188 0.912854 6.02485 1.50524C5.26214 2.01022 4.87359 2.75313 4.82562 3.68541C6.61487 3.68541 8.38494 3.68541 10.1694 3.68541Z" fill="white"/>
+													</svg>
+												</button>
+											</div>
+											<img class="knife-case__image" src="images/contents/knife-item_1.png" alt="Изображение ножа 'Складной нож SQ01-B' ">
+										</div>
+										<div class="knife-case__info">
+											<a class="knife-case__link" href="#"><b class="knife-case__title" title="Складной нож SQ01-B">Складной нож SQ01-B</b></a>
+											<span class="knife-case__price" title="Цена товара: 850 р.">850 р.</span>
+											<span class="knife-case__new" title="Новинка">Новинка</span>
+										</div>
+									</div>
+									<div class="cases__content-case knife-case new">
+										<div class="knife-case__interaction">
+											<div class="knife-case__more">
+												<button class="knife-case__append" type="button" title="Добавить в Корзину">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 5V19" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M5 12H19" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												</button>
+												<button class="knife-case__basket" type="button" title="Перейти в Корзину">
+													<svg width="15" height="19" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M7.86207 0C8.12591 0.0631229 8.39933 0.106823 8.65837 0.194224C10.1502 0.713775 11.0952 1.98109 11.1959 3.57858C11.1959 3.60772 11.2055 3.63685 11.2103 3.69512C11.2775 3.69512 11.3446 3.69512 11.407 3.69512C12.0402 3.69512 12.6782 3.69512 13.3114 3.69512C13.7047 3.69512 13.8966 3.86992 13.935 4.26322C14.0645 5.71991 14.1892 7.18145 14.3139 8.63813C14.4674 10.3716 14.6209 12.1099 14.7745 13.8433C14.8512 14.6931 14.9519 15.5428 14.9903 16.3925C15.0287 17.2665 14.6209 17.9366 13.935 18.4367C13.3929 18.8301 12.7741 18.9903 12.1074 18.9903C9.70889 18.9854 7.30563 18.9903 4.90717 18.9903C4.15405 18.9903 3.40573 19.0146 2.65261 18.9806C1.70282 18.9417 0.920918 18.5436 0.369272 17.7375C-0.00968591 17.184 -0.0480613 16.5625 0.0190957 15.9118C0.158207 14.5668 0.263739 13.217 0.378865 11.8671C0.493992 10.5415 0.613915 9.2208 0.729041 7.89522C0.834574 6.72016 0.935309 5.54511 1.03604 4.37005C1.04084 4.31664 1.04084 4.25837 1.05044 4.20496C1.0984 3.86506 1.28549 3.69512 1.63086 3.69026C2.27365 3.68541 2.91164 3.69026 3.55443 3.69026C3.62639 3.69026 3.69834 3.69026 3.77509 3.69026C3.80387 3.11245 3.9142 2.57833 4.16844 2.08306C4.77285 0.932277 5.70825 0.252492 6.97464 0.0388449C7.02741 0.0291337 7.08018 0.0145668 7.13294 0C7.37279 0 7.61743 0 7.86207 0ZM3.78948 4.7585C3.19946 4.7585 2.63342 4.7585 2.05779 4.7585C2.05299 4.79734 2.0434 4.82648 2.0434 4.86046C1.89949 6.52108 1.75079 8.18656 1.60688 9.84717C1.4198 12.0128 1.23272 14.1832 1.04084 16.3488C1.00726 16.747 1.13678 17.0772 1.39581 17.3637C1.79876 17.8007 2.31682 17.9512 2.88766 17.9512C5.95769 17.956 9.03253 17.956 12.1026 17.9512C12.4479 17.9512 12.7789 17.8929 13.0955 17.7375C13.5992 17.4899 14.0405 16.9606 13.9542 16.2809C13.9014 15.873 13.8774 15.4554 13.8438 15.0427C13.7191 13.586 13.5896 12.1245 13.4649 10.6678C13.321 9.02658 13.1771 7.38053 13.0332 5.73933C13.0044 5.414 12.9708 5.08868 12.942 4.76821C12.3568 4.76821 11.786 4.76821 11.2055 4.76821C11.2055 4.83619 11.2055 4.89445 11.2055 4.94787C11.2055 5.41886 11.2103 5.88985 11.2007 6.35599C11.1959 6.65218 10.9657 6.87069 10.6827 6.86583C10.4092 6.86098 10.1886 6.64733 10.1742 6.36085C10.1694 6.26374 10.1742 6.16177 10.1742 6.06466C10.1742 5.63251 10.1742 5.20036 10.1742 4.76821C8.38014 4.76821 6.61008 4.76821 4.82562 4.76821C4.82562 4.81676 4.82562 4.85561 4.82562 4.8896C4.82562 5.3703 4.83042 5.85586 4.82562 6.33657C4.82082 6.64733 4.59537 6.87069 4.30755 6.86583C4.02453 6.86583 3.80867 6.64247 3.79908 6.34628C3.79428 6.25402 3.79908 6.16177 3.79908 6.06951C3.78948 5.63251 3.78948 5.20036 3.78948 4.7585ZM10.1694 3.68541C10.1022 2.67058 9.66572 1.89369 8.80227 1.40327C7.86687 0.87401 6.92188 0.912854 6.02485 1.50524C5.26214 2.01022 4.87359 2.75313 4.82562 3.68541C6.61487 3.68541 8.38494 3.68541 10.1694 3.68541Z" fill="white"/>
+													</svg>
+												</button>
+											</div>
+											<img class="knife-case__image" src="images/contents/knife-item_2.png" alt="Изображение ножа 'Складной нож JJ001-TUO-B' ">
+										</div>
+										<div class="knife-case__info">
+											<a class="knife-case__link" href="#"><b class="knife-case__title" title="Складной нож JJ001-TUO-B">Складной нож JJ001-TUO-B</b></a>
+											<span class="knife-case__price" title="Цена товара: 12 850 р.">12 850 р.</span>
+											<span class="knife-case__new" title="Новинка">Новинка</span>
+										</div>
+									</div>
+									<div class="catalog__items-item knife-case new">
+										<div class="knife-case__interaction">
+											<div class="knife-case__more">
+												<button class="knife-case__append" type="button" title="Добавить в Корзину">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 5V19" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M5 12H19" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												</button>
+												<button class="knife-case__basket" type="button" title="Перейти в Корзину">
+													<svg width="15" height="19" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M7.86207 0C8.12591 0.0631229 8.39933 0.106823 8.65837 0.194224C10.1502 0.713775 11.0952 1.98109 11.1959 3.57858C11.1959 3.60772 11.2055 3.63685 11.2103 3.69512C11.2775 3.69512 11.3446 3.69512 11.407 3.69512C12.0402 3.69512 12.6782 3.69512 13.3114 3.69512C13.7047 3.69512 13.8966 3.86992 13.935 4.26322C14.0645 5.71991 14.1892 7.18145 14.3139 8.63813C14.4674 10.3716 14.6209 12.1099 14.7745 13.8433C14.8512 14.6931 14.9519 15.5428 14.9903 16.3925C15.0287 17.2665 14.6209 17.9366 13.935 18.4367C13.3929 18.8301 12.7741 18.9903 12.1074 18.9903C9.70889 18.9854 7.30563 18.9903 4.90717 18.9903C4.15405 18.9903 3.40573 19.0146 2.65261 18.9806C1.70282 18.9417 0.920918 18.5436 0.369272 17.7375C-0.00968591 17.184 -0.0480613 16.5625 0.0190957 15.9118C0.158207 14.5668 0.263739 13.217 0.378865 11.8671C0.493992 10.5415 0.613915 9.2208 0.729041 7.89522C0.834574 6.72016 0.935309 5.54511 1.03604 4.37005C1.04084 4.31664 1.04084 4.25837 1.05044 4.20496C1.0984 3.86506 1.28549 3.69512 1.63086 3.69026C2.27365 3.68541 2.91164 3.69026 3.55443 3.69026C3.62639 3.69026 3.69834 3.69026 3.77509 3.69026C3.80387 3.11245 3.9142 2.57833 4.16844 2.08306C4.77285 0.932277 5.70825 0.252492 6.97464 0.0388449C7.02741 0.0291337 7.08018 0.0145668 7.13294 0C7.37279 0 7.61743 0 7.86207 0ZM3.78948 4.7585C3.19946 4.7585 2.63342 4.7585 2.05779 4.7585C2.05299 4.79734 2.0434 4.82648 2.0434 4.86046C1.89949 6.52108 1.75079 8.18656 1.60688 9.84717C1.4198 12.0128 1.23272 14.1832 1.04084 16.3488C1.00726 16.747 1.13678 17.0772 1.39581 17.3637C1.79876 17.8007 2.31682 17.9512 2.88766 17.9512C5.95769 17.956 9.03253 17.956 12.1026 17.9512C12.4479 17.9512 12.7789 17.8929 13.0955 17.7375C13.5992 17.4899 14.0405 16.9606 13.9542 16.2809C13.9014 15.873 13.8774 15.4554 13.8438 15.0427C13.7191 13.586 13.5896 12.1245 13.4649 10.6678C13.321 9.02658 13.1771 7.38053 13.0332 5.73933C13.0044 5.414 12.9708 5.08868 12.942 4.76821C12.3568 4.76821 11.786 4.76821 11.2055 4.76821C11.2055 4.83619 11.2055 4.89445 11.2055 4.94787C11.2055 5.41886 11.2103 5.88985 11.2007 6.35599C11.1959 6.65218 10.9657 6.87069 10.6827 6.86583C10.4092 6.86098 10.1886 6.64733 10.1742 6.36085C10.1694 6.26374 10.1742 6.16177 10.1742 6.06466C10.1742 5.63251 10.1742 5.20036 10.1742 4.76821C8.38014 4.76821 6.61008 4.76821 4.82562 4.76821C4.82562 4.81676 4.82562 4.85561 4.82562 4.8896C4.82562 5.3703 4.83042 5.85586 4.82562 6.33657C4.82082 6.64733 4.59537 6.87069 4.30755 6.86583C4.02453 6.86583 3.80867 6.64247 3.79908 6.34628C3.79428 6.25402 3.79908 6.16177 3.79908 6.06951C3.78948 5.63251 3.78948 5.20036 3.78948 4.7585ZM10.1694 3.68541C10.1022 2.67058 9.66572 1.89369 8.80227 1.40327C7.86687 0.87401 6.92188 0.912854 6.02485 1.50524C5.26214 2.01022 4.87359 2.75313 4.82562 3.68541C6.61487 3.68541 8.38494 3.68541 10.1694 3.68541Z" fill="white"/>
+													</svg>
+												</button>
+											</div>
+											<img class="knife-case__image" src="images/contents/knife-item_1.png" alt="Изображение ножа 'Складной нож SQ01-B' ">
+										</div>
+										<div class="knife-case__info">
+											<a class="knife-case__link" href="#"><b class="knife-case__title" title="Складной нож SQ01-B">Складной нож SQ01-B</b></a>
+											<span class="knife-case__price" title="Цена товара: 850 р.">850 р.</span>
+											<span class="knife-case__new" title="Новинка">Новинка</span>
+										</div>
+									</div>
+									<div class="cases__content-case knife-case">
+										<div class="knife-case__interaction">
+											<div class="knife-case__more">
+												<button class="knife-case__append" type="button" title="Добавить в Корзину">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 5V19" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M5 12H19" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												</button>
+												<button class="knife-case__basket" type="button" title="Перейти в Корзину">
+													<svg width="15" height="19" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M7.86207 0C8.12591 0.0631229 8.39933 0.106823 8.65837 0.194224C10.1502 0.713775 11.0952 1.98109 11.1959 3.57858C11.1959 3.60772 11.2055 3.63685 11.2103 3.69512C11.2775 3.69512 11.3446 3.69512 11.407 3.69512C12.0402 3.69512 12.6782 3.69512 13.3114 3.69512C13.7047 3.69512 13.8966 3.86992 13.935 4.26322C14.0645 5.71991 14.1892 7.18145 14.3139 8.63813C14.4674 10.3716 14.6209 12.1099 14.7745 13.8433C14.8512 14.6931 14.9519 15.5428 14.9903 16.3925C15.0287 17.2665 14.6209 17.9366 13.935 18.4367C13.3929 18.8301 12.7741 18.9903 12.1074 18.9903C9.70889 18.9854 7.30563 18.9903 4.90717 18.9903C4.15405 18.9903 3.40573 19.0146 2.65261 18.9806C1.70282 18.9417 0.920918 18.5436 0.369272 17.7375C-0.00968591 17.184 -0.0480613 16.5625 0.0190957 15.9118C0.158207 14.5668 0.263739 13.217 0.378865 11.8671C0.493992 10.5415 0.613915 9.2208 0.729041 7.89522C0.834574 6.72016 0.935309 5.54511 1.03604 4.37005C1.04084 4.31664 1.04084 4.25837 1.05044 4.20496C1.0984 3.86506 1.28549 3.69512 1.63086 3.69026C2.27365 3.68541 2.91164 3.69026 3.55443 3.69026C3.62639 3.69026 3.69834 3.69026 3.77509 3.69026C3.80387 3.11245 3.9142 2.57833 4.16844 2.08306C4.77285 0.932277 5.70825 0.252492 6.97464 0.0388449C7.02741 0.0291337 7.08018 0.0145668 7.13294 0C7.37279 0 7.61743 0 7.86207 0ZM3.78948 4.7585C3.19946 4.7585 2.63342 4.7585 2.05779 4.7585C2.05299 4.79734 2.0434 4.82648 2.0434 4.86046C1.89949 6.52108 1.75079 8.18656 1.60688 9.84717C1.4198 12.0128 1.23272 14.1832 1.04084 16.3488C1.00726 16.747 1.13678 17.0772 1.39581 17.3637C1.79876 17.8007 2.31682 17.9512 2.88766 17.9512C5.95769 17.956 9.03253 17.956 12.1026 17.9512C12.4479 17.9512 12.7789 17.8929 13.0955 17.7375C13.5992 17.4899 14.0405 16.9606 13.9542 16.2809C13.9014 15.873 13.8774 15.4554 13.8438 15.0427C13.7191 13.586 13.5896 12.1245 13.4649 10.6678C13.321 9.02658 13.1771 7.38053 13.0332 5.73933C13.0044 5.414 12.9708 5.08868 12.942 4.76821C12.3568 4.76821 11.786 4.76821 11.2055 4.76821C11.2055 4.83619 11.2055 4.89445 11.2055 4.94787C11.2055 5.41886 11.2103 5.88985 11.2007 6.35599C11.1959 6.65218 10.9657 6.87069 10.6827 6.86583C10.4092 6.86098 10.1886 6.64733 10.1742 6.36085C10.1694 6.26374 10.1742 6.16177 10.1742 6.06466C10.1742 5.63251 10.1742 5.20036 10.1742 4.76821C8.38014 4.76821 6.61008 4.76821 4.82562 4.76821C4.82562 4.81676 4.82562 4.85561 4.82562 4.8896C4.82562 5.3703 4.83042 5.85586 4.82562 6.33657C4.82082 6.64733 4.59537 6.87069 4.30755 6.86583C4.02453 6.86583 3.80867 6.64247 3.79908 6.34628C3.79428 6.25402 3.79908 6.16177 3.79908 6.06951C3.78948 5.63251 3.78948 5.20036 3.78948 4.7585ZM10.1694 3.68541C10.1022 2.67058 9.66572 1.89369 8.80227 1.40327C7.86687 0.87401 6.92188 0.912854 6.02485 1.50524C5.26214 2.01022 4.87359 2.75313 4.82562 3.68541C6.61487 3.68541 8.38494 3.68541 10.1694 3.68541Z" fill="white"/>
+													</svg>
+												</button>
+											</div>
+											<img class="knife-case__image" src="images/contents/knife-item_2.png" alt="Изображение ножа 'Складной нож JJ001-TUO-B' ">
+										</div>
+										<div class="knife-case__info">
+											<a class="knife-case__link" href="#"><b class="knife-case__title" title="Складной нож JJ001-TUO-B">Складной нож JJ001-TUO-B</b></a>
+											<span class="knife-case__price" title="Цена товара: 12 850 р.">12 850 р.</span>
+											<span class="knife-case__new" title="Новинка">Новинка</span>
+										</div>
+									</div>
+									<div class="catalog__items-item knife-case">
+										<div class="knife-case__interaction">
+											<div class="knife-case__more">
+												<button class="knife-case__append" type="button" title="Добавить в Корзину">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 5V19" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M5 12H19" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												</button>
+												<button class="knife-case__basket" type="button" title="Перейти в Корзину">
+													<svg width="15" height="19" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M7.86207 0C8.12591 0.0631229 8.39933 0.106823 8.65837 0.194224C10.1502 0.713775 11.0952 1.98109 11.1959 3.57858C11.1959 3.60772 11.2055 3.63685 11.2103 3.69512C11.2775 3.69512 11.3446 3.69512 11.407 3.69512C12.0402 3.69512 12.6782 3.69512 13.3114 3.69512C13.7047 3.69512 13.8966 3.86992 13.935 4.26322C14.0645 5.71991 14.1892 7.18145 14.3139 8.63813C14.4674 10.3716 14.6209 12.1099 14.7745 13.8433C14.8512 14.6931 14.9519 15.5428 14.9903 16.3925C15.0287 17.2665 14.6209 17.9366 13.935 18.4367C13.3929 18.8301 12.7741 18.9903 12.1074 18.9903C9.70889 18.9854 7.30563 18.9903 4.90717 18.9903C4.15405 18.9903 3.40573 19.0146 2.65261 18.9806C1.70282 18.9417 0.920918 18.5436 0.369272 17.7375C-0.00968591 17.184 -0.0480613 16.5625 0.0190957 15.9118C0.158207 14.5668 0.263739 13.217 0.378865 11.8671C0.493992 10.5415 0.613915 9.2208 0.729041 7.89522C0.834574 6.72016 0.935309 5.54511 1.03604 4.37005C1.04084 4.31664 1.04084 4.25837 1.05044 4.20496C1.0984 3.86506 1.28549 3.69512 1.63086 3.69026C2.27365 3.68541 2.91164 3.69026 3.55443 3.69026C3.62639 3.69026 3.69834 3.69026 3.77509 3.69026C3.80387 3.11245 3.9142 2.57833 4.16844 2.08306C4.77285 0.932277 5.70825 0.252492 6.97464 0.0388449C7.02741 0.0291337 7.08018 0.0145668 7.13294 0C7.37279 0 7.61743 0 7.86207 0ZM3.78948 4.7585C3.19946 4.7585 2.63342 4.7585 2.05779 4.7585C2.05299 4.79734 2.0434 4.82648 2.0434 4.86046C1.89949 6.52108 1.75079 8.18656 1.60688 9.84717C1.4198 12.0128 1.23272 14.1832 1.04084 16.3488C1.00726 16.747 1.13678 17.0772 1.39581 17.3637C1.79876 17.8007 2.31682 17.9512 2.88766 17.9512C5.95769 17.956 9.03253 17.956 12.1026 17.9512C12.4479 17.9512 12.7789 17.8929 13.0955 17.7375C13.5992 17.4899 14.0405 16.9606 13.9542 16.2809C13.9014 15.873 13.8774 15.4554 13.8438 15.0427C13.7191 13.586 13.5896 12.1245 13.4649 10.6678C13.321 9.02658 13.1771 7.38053 13.0332 5.73933C13.0044 5.414 12.9708 5.08868 12.942 4.76821C12.3568 4.76821 11.786 4.76821 11.2055 4.76821C11.2055 4.83619 11.2055 4.89445 11.2055 4.94787C11.2055 5.41886 11.2103 5.88985 11.2007 6.35599C11.1959 6.65218 10.9657 6.87069 10.6827 6.86583C10.4092 6.86098 10.1886 6.64733 10.1742 6.36085C10.1694 6.26374 10.1742 6.16177 10.1742 6.06466C10.1742 5.63251 10.1742 5.20036 10.1742 4.76821C8.38014 4.76821 6.61008 4.76821 4.82562 4.76821C4.82562 4.81676 4.82562 4.85561 4.82562 4.8896C4.82562 5.3703 4.83042 5.85586 4.82562 6.33657C4.82082 6.64733 4.59537 6.87069 4.30755 6.86583C4.02453 6.86583 3.80867 6.64247 3.79908 6.34628C3.79428 6.25402 3.79908 6.16177 3.79908 6.06951C3.78948 5.63251 3.78948 5.20036 3.78948 4.7585ZM10.1694 3.68541C10.1022 2.67058 9.66572 1.89369 8.80227 1.40327C7.86687 0.87401 6.92188 0.912854 6.02485 1.50524C5.26214 2.01022 4.87359 2.75313 4.82562 3.68541C6.61487 3.68541 8.38494 3.68541 10.1694 3.68541Z" fill="white"/>
+													</svg>
+												</button>
+											</div>
+											<img class="knife-case__image" src="images/contents/knife-item_1.png" alt="Изображение ножа 'Складной нож SQ01-B' ">
+										</div>
+										<div class="knife-case__info">
+											<a class="knife-case__link" href="#"><b class="knife-case__title" title="Складной нож SQ01-B">Складной нож SQ01-B</b></a>
+											<span class="knife-case__price" title="Цена товара: 850 р.">850 р.</span>
+											<span class="knife-case__new" title="Новинка">Новинка</span>
+										</div>
+									</div>
+									<div class="cases__content-case knife-case new">
+										<div class="knife-case__interaction">
+											<div class="knife-case__more">
+												<button class="knife-case__append" type="button" title="Добавить в Корзину">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 5V19" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M5 12H19" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												</button>
+												<button class="knife-case__basket" type="button" title="Перейти в Корзину">
+													<svg width="15" height="19" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M7.86207 0C8.12591 0.0631229 8.39933 0.106823 8.65837 0.194224C10.1502 0.713775 11.0952 1.98109 11.1959 3.57858C11.1959 3.60772 11.2055 3.63685 11.2103 3.69512C11.2775 3.69512 11.3446 3.69512 11.407 3.69512C12.0402 3.69512 12.6782 3.69512 13.3114 3.69512C13.7047 3.69512 13.8966 3.86992 13.935 4.26322C14.0645 5.71991 14.1892 7.18145 14.3139 8.63813C14.4674 10.3716 14.6209 12.1099 14.7745 13.8433C14.8512 14.6931 14.9519 15.5428 14.9903 16.3925C15.0287 17.2665 14.6209 17.9366 13.935 18.4367C13.3929 18.8301 12.7741 18.9903 12.1074 18.9903C9.70889 18.9854 7.30563 18.9903 4.90717 18.9903C4.15405 18.9903 3.40573 19.0146 2.65261 18.9806C1.70282 18.9417 0.920918 18.5436 0.369272 17.7375C-0.00968591 17.184 -0.0480613 16.5625 0.0190957 15.9118C0.158207 14.5668 0.263739 13.217 0.378865 11.8671C0.493992 10.5415 0.613915 9.2208 0.729041 7.89522C0.834574 6.72016 0.935309 5.54511 1.03604 4.37005C1.04084 4.31664 1.04084 4.25837 1.05044 4.20496C1.0984 3.86506 1.28549 3.69512 1.63086 3.69026C2.27365 3.68541 2.91164 3.69026 3.55443 3.69026C3.62639 3.69026 3.69834 3.69026 3.77509 3.69026C3.80387 3.11245 3.9142 2.57833 4.16844 2.08306C4.77285 0.932277 5.70825 0.252492 6.97464 0.0388449C7.02741 0.0291337 7.08018 0.0145668 7.13294 0C7.37279 0 7.61743 0 7.86207 0ZM3.78948 4.7585C3.19946 4.7585 2.63342 4.7585 2.05779 4.7585C2.05299 4.79734 2.0434 4.82648 2.0434 4.86046C1.89949 6.52108 1.75079 8.18656 1.60688 9.84717C1.4198 12.0128 1.23272 14.1832 1.04084 16.3488C1.00726 16.747 1.13678 17.0772 1.39581 17.3637C1.79876 17.8007 2.31682 17.9512 2.88766 17.9512C5.95769 17.956 9.03253 17.956 12.1026 17.9512C12.4479 17.9512 12.7789 17.8929 13.0955 17.7375C13.5992 17.4899 14.0405 16.9606 13.9542 16.2809C13.9014 15.873 13.8774 15.4554 13.8438 15.0427C13.7191 13.586 13.5896 12.1245 13.4649 10.6678C13.321 9.02658 13.1771 7.38053 13.0332 5.73933C13.0044 5.414 12.9708 5.08868 12.942 4.76821C12.3568 4.76821 11.786 4.76821 11.2055 4.76821C11.2055 4.83619 11.2055 4.89445 11.2055 4.94787C11.2055 5.41886 11.2103 5.88985 11.2007 6.35599C11.1959 6.65218 10.9657 6.87069 10.6827 6.86583C10.4092 6.86098 10.1886 6.64733 10.1742 6.36085C10.1694 6.26374 10.1742 6.16177 10.1742 6.06466C10.1742 5.63251 10.1742 5.20036 10.1742 4.76821C8.38014 4.76821 6.61008 4.76821 4.82562 4.76821C4.82562 4.81676 4.82562 4.85561 4.82562 4.8896C4.82562 5.3703 4.83042 5.85586 4.82562 6.33657C4.82082 6.64733 4.59537 6.87069 4.30755 6.86583C4.02453 6.86583 3.80867 6.64247 3.79908 6.34628C3.79428 6.25402 3.79908 6.16177 3.79908 6.06951C3.78948 5.63251 3.78948 5.20036 3.78948 4.7585ZM10.1694 3.68541C10.1022 2.67058 9.66572 1.89369 8.80227 1.40327C7.86687 0.87401 6.92188 0.912854 6.02485 1.50524C5.26214 2.01022 4.87359 2.75313 4.82562 3.68541C6.61487 3.68541 8.38494 3.68541 10.1694 3.68541Z" fill="white"/>
+													</svg>
+												</button>
+											</div>
+											<img class="knife-case__image" src="images/contents/knife-item_2.png" alt="Изображение ножа 'Складной нож JJ001-TUO-B' ">
+										</div>
+										<div class="knife-case__info">
+											<a class="knife-case__link" href="#"><b class="knife-case__title" title="Складной нож JJ001-TUO-B">Складной нож JJ001-TUO-B</b></a>
+											<span class="knife-case__price" title="Цена товара: 12 850 р.">12 850 р.</span>
+											<span class="knife-case__new" title="Новинка">Новинка</span>
+										</div>
+									</div>
+
+								</div>
+							<button class="catalog__more">Смотреть ещё</button>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="subscription">
+					<h3 class="subscription__title">Узнавайте первым о новинках и новостях</h3>
+					<div class="subscription__inputBox">
+						<input class="subscription__input" type="email" placeholder="Ваш e-mail">
+					</div>
+				</div>
+				<footer class="footer">
+					<div class="footer__container">
+						<div class="footer__inner">
+							<div class="footer__section footer__description">
+								<div class="footer__header">
+									<a class="footer__logo" href="#" title="Логотип Компании TuoTown">
+										<img src="images/logo-footer.jpg" alt="Логотип Компании TuoTown">
+									</a>
+									<span class="footer__header-title">легендарные ножи, создающие шедевры</span>
+								</div>
+								<div class="footer__texts">
+									<p class="footer__text">Компания «Tuotown» – эксклюзивный представитель профессиональных кухонных ножей, изготовленных лучшими мастерами Восточной Азии с применением передового европейского оборудования и современных материалов.</p>
+									<p class="footer__text">Они отличаются идеальным балансом и фантастической остротой. Сочетают в себе вековые традиции и новейшие разработки. <br/> Также предлагаем широкий ассортимент сопутствующих товаров.</p>
+								</div>
+							</div>
+							<nav class="footer__section footer__navigation">
+								<div class="footer__navigation-item">
+									<b class="footer__title"><a href="information.html">Информация</a></b>
+									<ul class="footer__list">
+										<li class="footer__list-item" title="Главная"><a class="footer__list-link" href="#">Главная</a></li>
+										<li class="footer__list-item" title="Новости"><a class="footer__list-link" href="#">Новости</a></li>
+										<li class="footer__list-item" title="О компании"><a class="footer__list-link" href="information.html">О компании</a></li>
+										<li class="footer__list-item" title="Контакты"><a class="footer__list-link" href="information.html">Информация</a></li>
+									</ul>
+								</div>
+								<div class="footer__navigation-item">
+									<b class="footer__title"><a href="catalog.html">Каталог</a></b>
+									<ul class="footer__list">
+										<li class="footer__list-item" title="Кухонные ножи"><a class="footer__list-link" href="catalog.html">Кухонные ножи</a></li>
+										<li class="footer__list-item" title="Складные ножи"><a class="footer__list-link" href="catalog.html">Складные ножи</a></li>
+										<li class="footer__list-item" title="Точилки для ножей"><a class="footer__list-link" href="#">Точилки для ножей</a></li>
+										<li class="footer__list-item" title="Аксессуары"><a class="footer__list-link" href="#">Аксессуары</a></li>
+									</ul>
+								</div>
+								<div class="footer__navigation-item footer__navigation-social">
+									<b class="footer__title">Мы в соцсетях</b>
+									<ul class="footer__list">
+										<li class="footer__list-item footer__navigation-social--item" title="Перейти на страницу в Facebook"><a class="footer__list-link footer__navigation-social--link" href="#"><img src="images/icons/facebook-logo.svg" alt="Логотип Facebok"></a></li>
+										<li class="footer__list-item footer__navigation-social--item" title="Перейти на страницу во ВКонтакте"><a class="footer__list-link footer__navigation-social--link" href="#"><img src="images/icons/vk-logo.svg" alt="Логотип ВКонтакте"></a></li>
+										<li class="footer__list-item footer__navigation-social--item" title="Перейти на страницу в Instagram"><a class="footer__list-link footer__navigation-social--link" href="#"><img src="images/icons/instagram.svg" alt="Логотип Instagram"></a></li>
+										<li class="footer__list-item footer__navigation-social--item" title="Перейти на страницу в YouTube"><a class="footer__list-link footer__navigation-social--link" href="#"><img src="images/icons/youtube-logo.svg" alt="Логотип YouTube"></a></li>
+									</ul>
+								</div>
+							</nav>
+							<div class="footer__section footer__contacts">
+								<b class="footer__title">Контактная информация</b>
+								<div class="footer__contacts-body">
+									<a class="footer__contacts-link footer__contacts-tel" href="tel:+77777777777" title="Номер телефона">+7 (777) 777-77-77</a>
+									<a class="footer__contacts-link footer__contacts-email" href="mailto:tuotown@gmail.com" title="Электронная почта">tuotown@gmail.com</a>
+									<time class="footer__contacts-schedule" title="График работы">08:00 — 00:00, ежедневно</time>
+									<p class="footer__contacts-address" title="Место нахождения">Россия, Москва, вход Ф, 15-70-75</p>
+									<div class="footer__contacts-image">
+										<img src="images/image-dunno.jpg" alt="Неизвестная картинка">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</footer>
+				<div class="footer-copy">
+					<div class="footer-copy__container">
+						<p class="footer-copy__text">2022 © Copyright by Revan-Darth. Все права защищены и пренадлежать правообладателю</p>
+						<div class="footer-copy__image">
+							<img src="images/contents/support.png" alt="Логотип Компании">
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<script src="js/libs.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
